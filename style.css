@@ -1,0 +1,106 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Initial title animation */
+#initial-title {
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/* Text boxes */
+.text-box {
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: justify;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Dark mode content */
+#dark-mode-content {
+  text-align: center;
+}
+
+#final-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Final message */
+#final-message {
+  font-size: 3rem;
+  color: white;
+}
+/* Add these animations for fading in and out */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+/* Apply animations to the text-boxes and buttons */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+/* Ensure hidden elements stay invisible */
+.hidden {
+  display: none;
+  opacity: 0;
+}
