@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,16 +61,6 @@ button:hover {
   text-align: center;
 }
 
-#final-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-/* Final message */
-#final-message {
-  font-size: 3rem;
-  color: white;
-}
 /* Add these animations for fading in and out */
 @keyframes fadeIn {
   from {
@@ -103,4 +93,69 @@ button:hover {
 .hidden {
   display: none;
   opacity: 0;
+}
+#love-meter {
+  width: 100%; /* Full width */
+  margin-top: 20px;
+  appearance: none;
+  height: 10px;
+  border-radius: 5px;
+  background: black; /* Set initial background to black */
+  outline: none;
+}
+
+#love-meter::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+
+#love-meter::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+
+#final-message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow so the text scrolls out of view */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 24px;
+  color: white;
+  background-color: black; /* Dark background for the credits effect */
+}
+
+#love-letter {
+  position: relative;
+  width: 80%; /* Make the love letter text narrower for a centered look */
+  margin-top: 100vh; /* Initially place the text below the viewport */
+}
+
+/* Scroll animation */
+.scroll {
+  animation: scrollUp 60s linear forwards; /* Start scrolling animation when class is added */
+}
+
+/* Scroll animation */
+@keyframes scrollUp {
+  0% {
+      transform: translateY(100%); /* Start below the viewport */
+  }
+  100% {
+      transform: translateY(-200%); /* Scroll up beyond the viewport */
+  }
+}
+
+*:not(#final-message) {
+  z-index: 1000;
 }
