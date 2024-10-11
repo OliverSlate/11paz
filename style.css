@@ -143,7 +143,7 @@ button:hover {
 
 /* Scroll animation */
 .scroll {
-  animation: scrollUp 60s linear forwards; /* Start scrolling animation when class is added */
+  animation: scrollUp 90s linear forwards; /* Start scrolling animation when class is added */
 }
 
 /* Scroll animation */
