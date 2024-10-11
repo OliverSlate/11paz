@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 1000);  // Wait for fade-out before changing the text
         }
 
-        // Show final message at 20 clicks
-        if (counter >= 20) {
+        // Show final message at 50 clicks
+        if (counter >= 50) {
             darkModeContent.classList.add('fade-out');
             setTimeout(() => {
                 darkModeContent.classList.add('hidden');
